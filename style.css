@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e8f6f1;
-    color: #222;
+    background-color: #0e056c;
+    color: #c8afef;
     line-height: 1.6;
 }
 
@@ -18,18 +18,18 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 10%;
+    padding: 10px 10%;
     position: sticky;
     top: 0;
 
-    background-color: rgb(158, 220, 203);
+    background-color: rgb(40, 4, 59);
     border-bottom: 1px solid #ddd;
 }
 
 .nav-links a {
     margin-left: 20px;
     text-decoration: none;
-    color: #444;
+    color: #f8f8f8;
 }
 
 .nav-links a:hover {
@@ -50,12 +50,12 @@ nav {
 
 .hero h2 {
     font-size: 4rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero p {
     max-width: 600px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 1.2rem;
 }
 
@@ -79,6 +79,15 @@ button:hover {
     opacity: 0.8;
 }
 
+.header {
+    padding: 25px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+    transition: 0.3s; 
+}
 /* SECTIONS */
 
 section {
@@ -86,40 +95,60 @@ section {
 }
 
 section h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 2rem;
 }
 
 /* PROJECTS */
 
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
 .project-card {
-    background-color: white;
-
-    padding: 25px;
-    margin-bottom: 20px;
-
+    background: white;
     border-radius: 12px;
+    overflow: hidden;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
-/* MOBILE */
+.project-card img {
+    width: 570px;
+    height: 350px;
+    object-fit: cover;
+}
 
-@media (max-width: 768px) {
+.project-content {
+    padding: 15px;
+}
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
+.project-title {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
 
-    .hero h2 {
-        font-size: 2.5rem;
-    }
+    margin-bottom: 10px;
 
+    text-decoration: none;
+    color: #222;
+}
+
+.project-title:hover {
+    color: #7a6ff0;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
 }
