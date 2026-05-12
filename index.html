@@ -4,146 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Siluni Jayarathne</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- ICONS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 </head>
 
 <body>
-    <nav class = "header">
-        <h1>Hi, My name is Siluni</h1>
-        <div class="nav-links"> <a href="#about">About</a> <a href="#projects">Projects</a> <a
-                href="#contact">Contact</a> </div>
-    </nav>
-    <section class="hero">
+
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+
+        <aside class="left-panel">
+
+            <div>
+
+                <h2>Siluni<br>Jayarathne</h2>
+                <br>
+                <div class="about-text">
+                <p >
+                    I am a UBC Data Science student interested in machine learning,
+                    data engineering, and creative technology.
+                </p>
+                </div>
+                <div class="about-text">
+
+                    <p>
+                        I enjoy building projects that turn messy data
+                        into meaningful insights.
+                    <br>
+                        Outside of tech, I love photography, sketching portraits and
+                        hiking.
+                    </p>
+
+                   
+
+                </div>
+                <br><br>
+                <div class="tech-stack">
+
+                    <h3>My Tech Stack</h3>
+
+                    <p>
+                        Python • Java • SQL • Docker • Git • Excel
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- SOCIALS -->
+
+            <div class="socials">
+
+                <a href="https://github.com/silunij" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/siluni-jayarathne/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:silunijayarathne@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- RIGHT PANEL -->
+
+        <main class="right-panel">
+
+            <!-- PROJECTS -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <h2>Projects</h2>
+
+                    <div class="carousel-buttons">
+                        <button class="arrow" id="projectLeft">←</button>
+                        <button class="arrow" id="projectRight">→</button>
+                    </div>
+
+                </div>
+
+                <div class="carousel" id="projectsCarousel">
+
+                    <!-- CARD -->
+
+                    <div class="card">
+
+                        <img src="images/imgvanhack.png">
+
+                        <div class="card-content">
+
+                            <a href="#" target="_blank" class="card-title">
+                                Grade Tracker App →
+                            </a>
+
+                            <p>
+                                Java application that helps students
+                                manage schedules and target grades.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+
+                    <div class="card">
+
+                        <img src="images/imgvanhack.png">
+
+                        <div class="card-content">
+
+                            <a href="#" target="_blank" class="card-title">
+                                Logistic Regression Model →
+                            </a>
+
+                            <p>
+                                ML project exploring prediction accuracy,
+                                feature selection, and model evaluation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+
+                    <div class="card">
+
+                        <img src="images/imgvanhack.png">
+
+                        <div class="card-content">
+
+                            <a href="#" target="_blank" class="card-title">
+                                Hackathon Project →
+                            </a>
+
+                            <p>
+                                Built a fast-paced data solution during
+                                a weekend hackathon competition.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+            
+<section>
+            <div class="currently">
+
+                
         
-        <p>
-    Hi! I’m a UBC Data Science student who enjoys building projects
-    that turn messy data into meaningful insights.
+    <h3>I am Currently,</h3>
+                <br>
+    <ul>
+        <li> Deepening my understanding in statistics, machine learning and data science 
+            overall with coursework</li>
+        <li> Learning more about data engineering and AI</li>
+        <li> Exploring new technologies and learning to use AI to make my work more efficient</li>
+        
 
-    Outside of tech, I love sketching portraits, photography,
-    hiking, and finding creative ways to tell stories through visuals.
-</p>
-        <button id="projectButton">View Projects</button>
-    </section>
-    <section id="about" class="about">
-        <h2>Tech skills</h2>
-        <p> I enjoy building practical projects that analyze data and reveal hidden insights. 
-            My interests are machine learning and Data engineering.  
-        </p>
-    </section>
-    <section id="projects" class="projects">
-    <h2>Projects</h2>
+    </ul>
 
-    <div class="carousel-buttons">
-    <button class="arrow" id="leftArrow">←</button>
-    <button class="arrow" id="rightArrow">→</button>
 </div>
-    <div class="projects-grid">
-
-        <!-- PROJECT CARD -->
-        <div class="project-card">
-
-            <img src="images/imgvanhack.png" alt="Project 1 screenshot">
-
-            <div class="project-content">
-
-                <a href="https://github.com/yourusername/project1" target="_blank" class="project-title">
-                    Grade Tracker App →
-                </a>
-
-                <p>
-                    Java-based application that helps students track courses,
-                    assignments, and target grades. Built with OOP principles
-                    and simple UI logic.
-                </p>
-
-            </div>
-        </div>
-
-        <!-- PROJECT CARD -->
-        <div class="project-card">
-
-            <img src="images/imgvanhack.png" alt="Project 2 screenshot">
-
-            <div class="project-content">
-
-                <a href="https://github.com/yourusername/project2" target="_blank" class="project-title">
-                    Logistic Regression Model →
-                </a>
-
-                <p>
-                    Machine learning model built from scratch to predict outcomes
-                    using feature selection and evaluation metrics.
-                </p>
-
-            </div>
-        </div>
-
-        <!-- PROJECT CARD -->
-        <div class="project-card">
-
-            <img src="images/imgvanhack.png" alt="Project 2 screenshot">
-
-            <div class="project-content">
-
-                <a href="https://github.com/yourusername/project2" target="_blank" class="project-title">
-                    Logistic Regression Model →
-                </a>
-
-                <p>
-                    Machine learning model built from scratch to predict outcomes
-                    using feature selection and evaluation metrics.
-                </p>
-
-            </div>
-        </div>
-
-        <!-- PROJECT CARD -->
-        <div class="project-card">
-
-            <img src="images/project2.png" alt="Project 2 screenshot">
-
-            <div class="project-content">
-
-                <a href="https://github.com/yourusername/project2" target="_blank" class="project-title">
-                    Logistic Regression Model →
-                </a>
-
-                <p>
-                    Machine learning model built from scratch to predict outcomes
-                    using feature selection and evaluation metrics.
-                </p>
-
-            </div>
-        </div>
-    </div>
 </section>
+<br>
+<br>
 
-<section class="gallery">
+            <!-- GALLERY -->
 
-    <h2>Outside of Tech</h2>
+            <section class="section">
 
-    <p>
-        Some moments and hobbies outside coding.
-    </p>
+                <div class="section-header">
 
-    <div class="gallery-grid">
+                    <h2>Art & Photography</h2>
 
-        <img src="images/photo1.jpg" alt="">
-        <img src="images/photo2.jpg" alt="">
-        <img src="images/photo3.jpg" alt="">
-        <img src="images/photo4.jpg" alt="">
+                    <div class="carousel-buttons">
+                        <button class="arrow" id="galleryLeft">←</button>
+                        <button class="arrow" id="galleryRight">→</button>
+                    </div>
+
+                </div>
+
+                <div class="carousel" id="galleryCarousel">
+
+                    <div class="gallery-card">
+                        <img src="images/art1.jpg">
+                    </div>
+
+                    
+
+                    <div class="gallery-card">
+                        <img src="images/art2.jpg">
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/foto2.jpg">
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/art3.jpg">
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/foto3.jpg">
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
 
     </div>
 
-</section>
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email: silunijayarathne@gmail.com</p>
-        <p> LinkedIn: <a href="https://www.linkedin.com/in/siluni-jayarathne/" target="_blank"> https://www.linkedin.com/in/siluni-jayarathne/ </a> </p>
-        <p> GitHub: <a href="https://github.com/silunij" target="_blank"> github.com/silunij </a> </p>
-    </section>
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
-
 </html>

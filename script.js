@@ -1,59 +1,71 @@
-const projectButton = document.getElementById("projectButton");
+function setupCarousel(
+    carouselId,
+    leftButtonId,
+    rightButtonId
+) {
 
-projectButton.addEventListener("click", () => {
+    const carousel =
+        document.getElementById(carouselId);
 
-    document
-        .getElementById("projects")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    const leftButton =
+        document.getElementById(leftButtonId);
 
-});
+    const rightButton =
+        document.getElementById(rightButtonId);
 
-const projectsGrid = document.querySelector(".projects-grid");
+    rightButton.addEventListener("click", () => {
 
-const leftArrow = document.getElementById("leftArrow");
-const rightArrow = document.getElementById("rightArrow");
+        const maxScroll =
+            carousel.scrollWidth - carousel.clientWidth;
 
-rightArrow.addEventListener("click", () => {
+        if (carousel.scrollLeft >= maxScroll - 10) {
 
-    const maxScroll =
-        projectsGrid.scrollWidth - projectsGrid.clientWidth;
+            carousel.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
 
-    if (projectsGrid.scrollLeft >= maxScroll - 10) {
+        } else {
 
-        projectsGrid.scrollTo({
-            left: 0,
-            behavior: "smooth"
-        });
+            carousel.scrollBy({
+                left: 340,
+                behavior: "smooth"
+            });
 
-    } else {
+        }
 
-        projectsGrid.scrollBy({
-            left: 340,
-            behavior: "smooth"
-        });
+    });
 
-    }
+    leftButton.addEventListener("click", () => {
 
-});
+        if (carousel.scrollLeft <= 0) {
 
-leftArrow.addEventListener("click", () => {
+            carousel.scrollTo({
+                left: carousel.scrollWidth,
+                behavior: "smooth"
+            });
 
-    if (projectsGrid.scrollLeft <= 0) {
+        } else {
 
-        projectsGrid.scrollTo({
-            left: projectsGrid.scrollWidth,
-            behavior: "smooth"
-        });
+            carousel.scrollBy({
+                left: -340,
+                behavior: "smooth"
+            });
 
-    } else {
+        }
 
-        projectsGrid.scrollBy({
-            left: -340,
-            behavior: "smooth"
-        });
+    });
 
-    }
+}
 
-});
+setupCarousel(
+    "projectsCarousel",
+    "projectLeft",
+    "projectRight"
+);
+
+setupCarousel(
+    "galleryCarousel",
+    "galleryLeft",
+    "galleryRight"
+);
